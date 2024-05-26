@@ -21,8 +21,6 @@
 import React, { useState } from 'react';
 import './Legend.css';
 
-import anotherSymbol from "./images/error.png";
-import anotherSymbol1 from "./images/error1.png";
 import checked from "./images/CarBaseF.png";
 import checked2 from "./images/baseBaseF.png";
 import checked3 from "./images/SpeakerBaseF.png";

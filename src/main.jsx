@@ -7,7 +7,7 @@
     - TextProvider: Komponent zapewniający dostęp do tekstu dla komponentów podrzędnych.
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import MyComponent from './components/Home/MyComponent.jsx';
 import Map from './components/Home/Map.jsx';
