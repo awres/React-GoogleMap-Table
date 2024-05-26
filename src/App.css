@@ -1,0 +1,43 @@
+#root {
+  max-width: 1280px; 
+  margin: 0 auto;
+  padding: 2rem; 
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter; /* Informuje przeglądarkę, że filtr elementu może się zmienić */
+  transition: filter 300ms; /* Animacja zmiany filtra w ciągu 300ms */
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa); /* Efekt cienia podczas najechania myszką */
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa); /* Efekt cienia  podczas najechania myszką */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg); /* Początkowa pozycja obrotu */
+  }
+  to {
+    transform: rotate(360deg); /* Końcowa pozycja obrotu */
+  }
+}
+
+/* Media query (dostosowanie stylów strony do różnych warunków, np.zerokość ekranu, orientacja urządzenia, preferencje użytkownika) */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear; /* Nieskończona animacja obrotu trwająca 20s */
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

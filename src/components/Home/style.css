@@ -1,0 +1,325 @@
+/*
+  Importowanie czcionki:
+*/
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
+
+
+/*
+  Definicje klas CSS:
+*/
+
+/* Styl dla wierszy zaznaczonych */
+.highlighted-row {
+  background-color: rgb(145, 145, 240) !important;
+  color: white;
+}
+
+* {font-family: 'Open Sans', sans-serif;}
+
+p{
+  text-align: center;
+  font-size: 50px;
+}
+
+/* Styl dla pierwszej litery nagłówków */
+th::first-letter{
+  font-size: 25px;
+}
+
+/* Styl dla wiersza nagłówków */
+thead tr:first-child{
+  background: #428bca;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Styl dla pierwszego wiersza ciała tabeli po najechaniu myszką */
+tbody tr:first-child:hover{
+  background-color: #d8e7f3;
+}
+
+tbody tr:first-child{
+  background-color: #ebf3f9;
+  color: #333;
+}
+tbody tr td{
+  color: #333;
+}
+
+.rwd-table {
+  margin: auto;
+  min-width: 300px;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+.rwd-table tr:first-child {
+  border-top: none;
+  color: #fff;
+}
+
+.rwd-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f9fc;
+}
+
+/* Styl dla nieparzystych wierszy tabeli */
+.rwd-table tr:nth-child(odd):not(:first-child) {
+  background-color: #ebf3f9;
+}
+
+.rwd-table th {
+  display: none;
+}
+
+.rwd-table td {
+  display: block;
+}
+
+.rwd-table td:first-child {
+  margin-top: .5em;
+}
+
+.rwd-table td:last-child {
+  margin-bottom: .5em;
+}
+
+/* Styl dla przedrostka komórki wiersza tabeli */
+
+.rwd-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 120px;
+  display: inline-block;
+  color: #000;
+}
+
+.rwd-table th,
+.rwd-table td {
+  text-align: left;
+}
+
+.rwd-table {
+  color: #333;
+  border-radius: .4em;
+  overflow: hidden;
+}
+
+.rwd-table tr {
+  border-color: #bfbfbf;
+}
+
+.rwd-table th,
+.rwd-table td {
+  padding: .5em 1em;
+}
+
+/* Media queries dla ekranów o szerokości mniejszej niż 601px */
+@media screen and (max-width: 601px) {
+  .rwd-table tr:nth-child(2) {
+    border-top: none;
+  }
+}
+
+/* Media queries dla ekranów o szerokości większej niż 600px */
+@media screen and (min-width: 600px) {
+  /* Styl dla wierszy tabeli responsywnej po najechaniu myszką */
+  .rwd-table tr:hover:not(:first-child) {
+    background-color: #d8e7f3;
+  }
+  .rwd-table td:before {
+    display: none;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    display: table-cell;
+    padding: .25em .5em;
+  }
+  .rwd-table th:first-child,
+  .rwd-table td:first-child {
+    padding-left: 0;
+  }
+  .rwd-table th:last-child,
+  .rwd-table td:last-child {
+    padding-right: 0;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    padding: 1em !important;
+  }
+}
+/* Styl dla tła strony (gradient) */
+body {
+  background: #4B79A1;
+  background: -webkit-linear-gradient(to left, #4B79A1 , #283E51);
+  background: linear-gradient(90deg, rgb(1, 6, 22) , rgb(50, 50, 179), 90%, rgb(12, 107, 126));        
+}
+
+.box div{
+  position: absolute;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 6px solid rgba(255,255,255,0.8);
+}
+/* nth-child(1) itd. - odnosi się do pierwszego elementu <div>.
+ */
+.box div:nth-child(1){
+  z-index: 2;
+  top: 5%;
+  left: 5%;
+  animation: animate 10s linear infinite; /* Animacja trwa 10s, bedzie postępować równomiernie, nieskończenie*/
+}
+.box div:nth-child(2){
+  top: 70%;
+  left: 8%;
+  animation: animate 7s linear infinite;
+}
+.box div:nth-child(3){
+  top: 35%;
+  left: 2%;
+  animation: animate 9s linear infinite;
+}
+.box div:nth-child(4){
+  top: 50%;
+  left: 97%;
+  animation: animate 10s linear infinite;
+}
+.box div:nth-child(5){
+  top: 90%;
+  left: 10%;
+  animation: animate 6s linear infinite;
+}
+.box div:nth-child(6){
+  top: 80%;
+  left: 80%;
+  animation: animate 12s linear infinite;
+}
+.box div:nth-child(7){
+  top: 70%;
+  left: 89%;
+  animation: animate 15s linear infinite;
+}
+.box div:nth-child(8){
+  top: 90%;
+  left: 96%;
+  animation: animate 16s linear infinite;
+}
+.box div:nth-child(9){
+  top: 89%;
+  left: 1%;
+  animation: animate 9s linear infinite;
+}
+.box div:nth-child(10){
+  top: 20%;
+  left: 95%;
+  animation: animate 5s linear infinite;
+}
+h1 {
+  text-align: center;
+  font-size: 2.4em;
+  color: #f2f2f2;
+}
+.container {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+  z-index: 1;
+}
+h3 {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 1.5em;
+  color: #cecece;
+}
+h3:before {
+  content: "\25C0";
+  position: absolute;
+  left: -50px;
+  -webkit-animation: leftRight 2s linear infinite;
+  animation: leftRight 2s linear infinite;
+}
+h3:after {
+  content: "\25b6";
+  position: absolute;
+  right: -50px;
+  -webkit-animation: leftRight 2s linear infinite reverse;
+  animation: leftRight 2s linear infinite reverse;
+}
+
+/* Keyframes dla animacji leftRight:
+   - Wykorzystuje transformację translateX do przesuwania symboli.
+   Animate:
+   - Włącza skalowanie, przesunięcie w pionie i obrót.
+   rainbowBorder:
+   - Zmienia kolor obramowania
+*/
+@-webkit-keyframes leftRight {
+  0%    { -webkit-transform: translateX(0)}
+  25%   { -webkit-transform: translateX(-10px)}
+  75%   { -webkit-transform: translateX(10px)}
+  100%  { -webkit-transform: translateX(0)}
+}
+@keyframes leftRight {
+  0%    { transform: translateX(0)}
+  25%   { transform: translateX(-10px)}
+  75%   { transform: translateX(10px)}
+  100%  { transform: translateX(0)}
+}
+
+
+@keyframes animate{
+  0%{
+    transform: scale(0) translateY(0) rotate(0);
+  }
+  100%{
+    transform: scale(1.3) translateY(-90px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+table{
+  width: 1500px;
+}
+.rwd-table-wrapper {
+  width: 1500px;
+  border: 10px solid;
+  border-radius: 10px;
+  animation: rainbowBorder 2.3s infinite;
+  justify-content: center;
+  align-items: center; 
+}
+
+@keyframes rainbowBorder {
+  0% {
+    border-color: red;
+  }
+  14% {
+    border-color: orange;
+  }
+  28% {
+    border-color: yellow;
+  }
+  42% {
+    border-color: green;
+  }
+  57% {
+    border-color: blue;
+  }
+  71% {
+    border-color: indigo;
+  }
+  85% {
+    border-color: violet;
+  }
+  100% {
+    border-color: red;
+  }
+}
