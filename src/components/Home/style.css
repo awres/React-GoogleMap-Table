@@ -8,6 +8,24 @@
   Definicje klas CSS:
 */
 
+
+thead{
+  font-size: 30px;
+}
+
+tbody{
+  font-size: 30px;
+}
+
+.rwd-table img {
+  display: block;
+  margin: 0 auto; 
+}
+img {
+  width: 80px;
+  height: 100px;
+}
+
 /* Styl dla wierszy zaznaczonych */
 .highlighted-row {
   background-color: rgb(145, 145, 240) !important;
@@ -23,7 +41,7 @@ p{
 
 /* Styl dla pierwszej litery nagłówków */
 th::first-letter{
-  font-size: 25px;
+  font-size: 55px;
 }
 
 /* Styl dla wiersza nagłówków */
@@ -286,10 +304,13 @@ h3:after {
   justify-content: center;
 }
 table{
-  width: 1500px;
+  width: 1900px;
+  height: 1500px;
 }
 .rwd-table-wrapper {
-  width: 1500px;
+  margin-left: 100px;
+  width: 1900px;
+  height: 1500px;
   border: 10px solid;
   border-radius: 10px;
   animation: rainbowBorder 2.3s infinite;

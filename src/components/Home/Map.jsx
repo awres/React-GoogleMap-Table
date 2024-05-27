@@ -73,7 +73,7 @@ function Map() {
   // Ładuje bibliotekę Google Maps (API KEY)
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "YOUR_GOOGLE_API",
+    googleMapsApiKey: "AIzaSyAbnOeBButjAIqOSf3dhOovloj20abEzps",
   });
 
   // Definiuje stany komponentu
@@ -189,6 +189,12 @@ function Map() {
     };
 
     fetchData();
+
+    // Ustawienie interwału na pobieranie danych co 5 sekund
+    const interval = setInterval(fetchData, 5000);
+
+    // Zwolnienie interwału przy wyłączeniu komponentu
+    return () => clearInterval(interval);
   }, []);
 
   // Funkcja obsługująca załadowanie mapy
@@ -288,7 +294,7 @@ function Map() {
                   title={n}
                   icon={{
                     url: iconUrl,
-                    scaledSize: new window.google.maps.Size(40, 40),
+                    scaledSize: new window.google.maps.Size(80, 80),
                   }}
                   onClick={() => handleMarkerClick(point.Name)}
                 />
