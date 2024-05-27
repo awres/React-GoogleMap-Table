@@ -73,7 +73,7 @@ function Map() {
   // Ładuje bibliotekę Google Maps (API KEY)
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyAbnOeBButjAIqOSf3dhOovloj20abEzps",
+    googleMapsApiKey: "",
   });
 
   // Definiuje stany komponentu
